@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^dayingaijin', views.dayingaijin, name='dayingaijin'),
     url(r'^uploadfile', views.upload_file, name='uploadfile'),
     url(r'^upload', views.upload, name='upload'),
+    url(r'^downloadfile', views.downloadfile, name='downloadfile'),
 ]
