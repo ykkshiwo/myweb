@@ -4,11 +4,10 @@ from PIL import Image
 class Hua:
     ascii_char = list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'. ")
 
-    def __init__(self, img_file, width, height, outfile='e:/00mypython/myweb/zfh'):
+    def __init__(self, img_file, width, height):
         self.IMG = img_file
         self.WIDTH = width
         self.HEIGHT = height
-        self.OUTPUT = outfile
 
     def get_char(self, r, g, b, alpha=256):
         if alpha == 0:

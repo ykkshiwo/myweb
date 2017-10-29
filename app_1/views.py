@@ -6,6 +6,7 @@ from django.utils import timezone
 from .forms import AddForm
 from .code_picture import Hua
 from django.http import StreamingHttpResponse
+from myweb import settings
 import re
 # Create your views here.
 
@@ -31,7 +32,7 @@ def liuyan(request):
 
 
 def dayingaijin(request):
-    if request.method == 'POST':  # 当提交表单时
+    if request.method == 'POST':
         name = request.POST['name']
         email = request.POST['email']
         comment = request.POST['comment']
@@ -39,7 +40,7 @@ def dayingaijin(request):
         p.save()
         return render(request, 'liuyan.html')
 
-    else:  # 当正常访问时
+    else:
         return render(request, 'liuyan.html')
 
 
@@ -72,18 +73,18 @@ def readFile(file_name, chunk_size=512):
 
 
 def upload_file(request):
-    if request.method == "POST":    # 请求方法为POST时，进行处理
-        myFile = request.FILES.get("myfile", None)    # 获取上传的文件，如果没有文件，则默认为None
+    if request.method == "POST":
+        myFile = request.FILES.get("myfile", None)
         if not myFile:
             return HttpResponse("no files for upload!")
         global this_file_name
         this_file_name = myFile.name
-        destination = open(os.path.join("E:/00mypython", this_file_name), 'wb+')    # 打开特定的文件进行二进制的写操作
-        for chunk in myFile.chunks():      # 分块写入文件
+        p = os.path.join(settings.BASE_DIR, 'app_1/p_for_code', this_file_name)
+        destination = open(p, 'wb+')
+        for chunk in myFile.chunks():
             destination.write(chunk)
         destination.close()
-        path = "E:/00mypython/" + this_file_name
-        a = Hua(path, 90, 50, 'e:/00mypython')
+        a = Hua(p, 90, 50)
         t = a.hua()
         context = {'hua': t}
         return render(request, 'hua.html', context)
