@@ -6,8 +6,20 @@
     <title>字符画</title>
 </head>
 <body>
-<pre>
-{{ hua }}
-</pre>
+<table border="1">
+  <tr>
+    <td>
+      <pre>
+      {{ hua }}
+      </pre>
+    </td>
+    <td>
+      <table border="2">
+        <a href="{% url 'app_1:index' %}">返回首页</a>
+      </table>
+    </td>
+  </tr>
+
+</table>
 </body>
 </html>
