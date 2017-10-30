@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-
+{% load static %}
 
 <html>
 <head>
   <title>
     留言板
   </title>
+  <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajaxSetup({
+                 data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+            });
+        $('#formadd').submit(function(){
+                var name = $("#name").val();                 //获得form中用户输入的name 注意这里的id_name 与你html中的id一致
+                var email = $("#email").val();    //同上
+                var comment = $("#comment").val();
+
+                $.ajax({
+                    type:"POST",
+                    data: {name:name, email:email, comment:comment},
+                    url: "{% url 'app_1:comments_upload' %}", //后台处理函数的url 这里用的是static url 需要与urls.py中的name一致
+                    cache: false,
+                    dataType: "html",
+                    success: function(result, statues, xml){
+                        alert(result);                                         //成功时弹出view传回来的结果
+                    },
+                    error: function(){
+                        alert("false");
+                    }
+                });
+                return false;
+            });
+
+        });
+    </script>
 </head>
 <table border="0" width="1200" height="100%">
   <tr>
@@ -13,22 +42,22 @@
 
     </td>
     <td align="center">
-      <form action="{% url 'app_1:dayingaijin' %}" method="post">
+      <form method="post" id="formadd">
           {% csrf_token %}
       <table border="1" width="600" height="500">
         <tr>
           <td colspan="2">
-          姓名: <input type="text" name="name"><br>
+          姓名: <input type="text" id="name"><br>
         </td>
         </tr>
         <tr>
           <td colspan="2">
-          邮箱: <input type="text" name="email" maxlength="20"><br>
+          邮箱: <input type="text" id="email" maxlength="20"><br>
         </td>
         </tr>
         <tr>
         <td colspan="2" valign="top" style="vertical-align:top;">
-          <p>建议：(限200字)</p><textarea maxlength="200" rows="6" cols="50" name="comment"></textarea>
+          <p>建议：(限200字)</p><textarea maxlength="200" rows="6" cols="50" id="comment"></textarea>
         </td>
       </tr>
         <tr>

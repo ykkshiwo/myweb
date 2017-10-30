@@ -101,5 +101,14 @@ def downloadfile(request):
     return response
 
 
-
+def comments_upload(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        comment = request.POST['comment']
+        p = People(name=str(name), email=str(email), comment=str(comment), date=timezone.now())
+        p.save()
+        return HttpResponse("success")
+    else:
+        return render(request, 'liuyan.html')
 
