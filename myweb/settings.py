@@ -25,7 +25,7 @@ SECRET_KEY = 'svhzj-f+@a2c!cyt@7e5c4qaht-rx3l(wjmyu%x%n)rh%23o^='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.kkykykk.club', '127.0.0.1']
 
 
 # Application definition
