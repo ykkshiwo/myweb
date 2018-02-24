@@ -112,3 +112,6 @@ def comments_upload(request):
     else:
         return render(request, 'liuyan.html')
 
+
+def welcome(request):
+    return render(request, 'table_bootstrap.html')

@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^upload', views.upload, name='upload'),
     url(r'^downloadfile', views.downloadfile, name='downloadfile'),
     url(r'^comments_upload', views.comments_upload, name='comments_upload'),
+    url(r'^welcome', views.welcome, name='welcome'),
 ]
