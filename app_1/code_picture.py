@@ -1,3 +1,4 @@
+"""
 from PIL import Image
 
 
@@ -29,3 +30,4 @@ class Hua:
             with open(self.OUTPUT + "/outputok.txt", 'w') as f:
                 f.write(txt)'''
         return txt
+                """

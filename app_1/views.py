@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from .models import People
 from django.utils import timezone
 from .forms import AddForm
-from .code_picture import Hua
+#from .code_picture import Hua
 from django.http import StreamingHttpResponse
 from myweb import settings
 import re
@@ -48,12 +48,6 @@ def upload(request):
     return render(request, 'upload.html')
 
 
-def hua(request):
-    path = "E:/00mypython/" + this_file_name
-    a = Hua(path, 90, 50, 'e:/00mypython')
-    a.hua()
-    return HttpResponse('OK')
-
 
 def file_download(request):
     # do something...
@@ -72,7 +66,7 @@ def readFile(file_name, chunk_size=512):
                 break
 
 
-def upload_file(request):
+'''def upload_file(request):
     if request.method == "POST":
         myFile = request.FILES.get("myfile", None)
         if not myFile:
@@ -87,7 +81,7 @@ def upload_file(request):
         a = Hua(p, 90, 50)
         t = a.hua()
         context = {'hua': t}
-        return render(request, 'hua.html', context)
+        return render(request, 'hua.html', context)'''
 
 
 
