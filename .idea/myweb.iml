@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ajax_jquery" />
     <orderEntry type="module" module-name="ttt" />
+    <orderEntry type="module" module-name="mywebtest" />
   </component>
 </module>

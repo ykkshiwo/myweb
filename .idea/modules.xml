@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../ajax_jquery/.idea/ajax_jquery.iml" filepath="$PROJECT_DIR$/../ajax_jquery/.idea/ajax_jquery.iml" />
+      <module fileurl="file://D:/ajax_jquery/.idea/ajax_jquery.iml" filepath="D:/ajax_jquery/.idea/ajax_jquery.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/myweb.iml" filepath="$PROJECT_DIR$/.idea/myweb.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../ttt/.idea/ttt.iml" filepath="$PROJECT_DIR$/../ttt/.idea/ttt.iml" />
+      <module fileurl="file://D:/mywebtest/.idea/mywebtest.iml" filepath="D:/mywebtest/.idea/mywebtest.iml" />
+      <module fileurl="file://D:/ttt/.idea/ttt.iml" filepath="D:/ttt/.idea/ttt.iml" />
     </modules>
   </component>
 </project>
