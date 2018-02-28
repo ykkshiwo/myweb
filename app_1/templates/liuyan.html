@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 {% load static %}
-
 <html>
 <head>
-  <title>
-    留言板
-  </title>
-  <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<meta charset="utf-8">
+	<title>Bootstrap 实例 - 基本表单</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
     <script>
         $(document).ready(function(){
             $.ajaxSetup({
@@ -24,7 +25,7 @@
                     cache: false,
                     dataType: "html",
                     success: function(result, statues, xml){
-                        alert(result);                                         //成功时弹出view传回来的结果
+                        alert("感谢您的留言");                                         //成功时弹出view传回来的结果
                     },
                     error: function(){
                         alert("false");
@@ -36,44 +37,42 @@
         });
     </script>
 </head>
-<table border="0" width="1200" height="100%">
-  <tr>
-    <td>
+<body>
 
-    </td>
-    <td align="center">
-      <form method="post" id="formadd">
-          {% csrf_token %}
-      <table border="1" width="600" height="500">
-        <tr>
-          <td colspan="2">
-          姓名: <input type="text" id="name"><br>
-        </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-          邮箱: <input type="text" id="email" maxlength="20"><br>
-        </td>
-        </tr>
-        <tr>
-        <td colspan="2" valign="top" style="vertical-align:top;">
-          <p>建议：(限200字)</p><textarea maxlength="200" rows="6" cols="50" id="comment"></textarea>
-        </td>
-      </tr>
-        <tr>
-          <td align="center">
-            <input type="reset" value="重置">
-          </td>
-          <td align="center">
-            <input type="submit" value="提交">
-          </td>
-        </tr>
-      </table>
-    </form>
-    </td>
-    <td>
 
-    </td>
-  </tr>
-</table>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="page-header">
+				<h1>
+					请在此页留言 <small>作者将会给您回复</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-4 column">
+		</div>
+		<div class="col-md-4 column">
+			<form role="form" id='formadd'>
+			{% csrf_token %}
+				<div class="form-group">
+					 <label for="exampleInputEmail1">Email address</label><input type="email" class="form-control" id="email" />
+				</div>
+				<div class="form-group">
+					 <label for="exampleInputName">Name</label><input type="name" class="form-control" id="name" />
+				</div>
+				<div class="form-group">
+					 <label for="exampleInputContent">Content</label><textarea type="Content" class="form-control" id="comment"></textarea>
+				</div>
+
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+		<div class="col-md-4 column">
+		</div>
+	</div>
+</div>
+
+</body>
 </html>
