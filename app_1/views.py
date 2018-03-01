@@ -24,7 +24,7 @@ def dayin(request):
 
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'index_new.html')
 
 
 def liuyan(request):

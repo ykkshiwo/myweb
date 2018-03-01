@@ -1,22 +1,24 @@
 <!DOCTYPE html>
+
+{% load static %}
 <html>
 <head>
 <title>Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
-<!-- css links -->
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" type="text/css" href="css/caption-hover.css" />
-<link rel="stylesheet" type="text/css" href="css/circle-hover.css" />
-<link href="css/slider.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+<!-- css links "{% static 'sound/dream_it_possible.mp3' %}"-->
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/caption-hover.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/circle-hover.css' %}" />
+<link href="{% static 'css/slider.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all">
 <!-- /css links -->
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-<script src="js/SmoothScroll.min.js"></script>
-<script type="text/javascript" src="js/modernizr.custom.js"></script> 
+<script src="{% static 'js/SmoothScroll.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/js/modernizr.custom.js' %}"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <!-- Fixed navbar -->
@@ -47,10 +49,10 @@
 <div class="banner">
 	<div id="content">
         <div id="slider">
-			<img src="images/banner1.jpg" alt="We Bring" data-url="#1">
-			<img src="images/banner2.jpg" alt="The Good" data-url="#2">
-			<img src="images/banner3.jpg" alt="Vegetable Farm" data-url="#3">
-			<img src="images/banner4.jpg" alt="To Life" data-url="#4">
+			<img src="{% static 'images/banner1.jpg' %}" alt="We Bring" data-url="#1">
+			<img src="{% static 'images/banner2.jpg' %}" alt="The Good" data-url="#2">
+			<img src="{% static 'images/banner3.jpg' %}" alt="Vegetable Farm" data-url="#3">
+			<img src="{% static 'images/banner4.jpg' %}" alt="To Life" data-url="#4">
 		</div>
 	</div>	
 </div>
@@ -84,7 +86,7 @@
                 <ul class="grid cs-style">
 					<li>
 						<figure>
-							<img src="images/farm1.jpg" alt="" class="img-responsive">
+							<img src="{% static 'images/farml.jpg' %}" alt="" class="img-responsive">
 							<figcaption>
 								<h3>Vegetable Farm</h3>
 								<p>Building a Better Tomorrow.</p>
@@ -111,7 +113,7 @@
                 <ul class="grid cs-style">
 					<li>
 						<figure>
-							<img src="images/farm2.jpg" alt="" class="img-responsive">
+							<img src="{% static 'images/farm2.jpg' %}" alt="" class="img-responsive">
 							<figcaption>
 								<h3>Something Special</h3>
 								<p>About The Vegetable Farm</p>
@@ -138,7 +140,7 @@
                 <ul class="grid cs-style">
 					<li>
 						<figure>
-							<img src="images/farm3.jpg" alt="" class="img-responsive">
+							<img src="{% static 'images/farm3.jpg' %}" alt="" class="img-responsive">
 							<figcaption>
 								<h3>Vegetable Farm</h3>
 								<p>The Fresh Maker!</p>
@@ -230,7 +232,7 @@
 							<i class="fa fa-paper-plane-o"></i>
 						</div>
 					</div>
-					<img src="images/port1.jpg" class="img-responsive" alt="">
+					<img src="{% static 'images/port1.jpg' %}" class="img-responsive" alt="">
 				</a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
@@ -240,7 +242,7 @@
 							<i class="fa fa-paper-plane-o"></i>
                         </div>
 					</div>
-                    <img src="images/port2.jpg" class="img-responsive" alt="">
+                    <img src="{% static 'images/port2.jpg' %}" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
@@ -250,7 +252,7 @@
                             <i class="fa fa-paper-plane-o"></i>
                         </div>
                     </div>
-                    <img src="images/port3.jpg" class="img-responsive" alt="">
+                    <img src="{% static 'images/port3.jpg' %}" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
@@ -260,7 +262,7 @@
                             <i class="fa fa-paper-plane-o"></i>
                         </div>
                     </div>
-                    <img src="images/port4.jpg" class="img-responsive" alt="">
+                    <img src="{% static 'images/port4.jpg' %}" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
@@ -270,7 +272,7 @@
                             <i class="fa fa-paper-plane-o"></i>
                         </div>
                     </div>
-                    <img src="images/port5.jpg" class="img-responsive" alt="">
+                    <img src="{% static 'images/port5.jpg' %}" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
@@ -280,7 +282,7 @@
                             <i class="fa fa-paper-plane-o"></i>
                         </div>
                     </div>
-					<img src="images/port6.jpg" class="img-responsive" alt="">
+					<img src="{% static 'images/port6.jpg' %}" class="img-responsive" alt="">
                 </a>
             </div>
         </div>
@@ -302,7 +304,7 @@
                     <div class="modal-body">
                         <h3>Vegetable Farm</h3>
 						<hr>
-                        <img src="images/port1.jpg" class="img-responsive img-centered" alt="">
+                        <img src="{% static 'images/port1.jpg' %} class="img-responsive img-centered" alt="">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                     </div>
@@ -324,7 +326,7 @@
                     <div class="modal-body">
                         <h3>Vegetable Farm</h3>
                         <hr>
-                        <img src="images/port2.jpg" class="img-responsive img-centered" alt="">
+                        <img src="{% static 'images/port2.jpg' %}" class="img-responsive img-centered" alt="">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                     </div>
@@ -493,7 +495,7 @@
 <!-- /Blog -->
 <!-- Contact-Us -->
 <section class="contact-us" id="contact">
-	<h3 class="text-center slideanim">Contact Us</h2>
+	<h2 class="text-center slideanim">Contact Us</h2>
 	<div class="container">
 		<div class="row">
             <div class="col-md-8 col-xs-12 slideanim">
@@ -552,12 +554,12 @@
 <!-- /Contact-Form -->
 <!-- Footer -->
 <!-- js files -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/classie.js"></script>
-<script src="js/TweenMax.min.js"></script>
-<script src="js/index.js"></script>
-<script src="js/index2.js"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/classie.js' %}"></script>
+<script src="{% static 'js/TweenMax.min.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/index2.js' %}"></script>
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
