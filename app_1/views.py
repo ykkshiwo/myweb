@@ -8,6 +8,9 @@ from .forms import AddForm
 from django.http import StreamingHttpResponse
 from myweb import settings
 import re
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+from django.contrib.auth import login, logout
 # Create your views here.
 
 

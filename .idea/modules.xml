@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://D:/ajax_jquery/.idea/ajax_jquery.iml" filepath="D:/ajax_jquery/.idea/ajax_jquery.iml" />
+      <module fileurl="file://D:/auth/.idea/auth.iml" filepath="D:/auth/.idea/auth.iml" />
+      <module fileurl="file://D:/log/.idea/log.iml" filepath="D:/log/.idea/log.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/myweb.iml" filepath="$PROJECT_DIR$/.idea/myweb.iml" />
       <module fileurl="file://D:/mywebtest/.idea/mywebtest.iml" filepath="D:/mywebtest/.idea/mywebtest.iml" />
       <module fileurl="file://D:/ttt/.idea/ttt.iml" filepath="D:/ttt/.idea/ttt.iml" />

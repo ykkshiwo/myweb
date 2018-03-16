@@ -7,5 +7,7 @@
     <orderEntry type="module" module-name="ajax_jquery" />
     <orderEntry type="module" module-name="ttt" />
     <orderEntry type="module" module-name="mywebtest" />
+    <orderEntry type="module" module-name="auth" />
+    <orderEntry type="module" module-name="log" />
   </component>
 </module>
